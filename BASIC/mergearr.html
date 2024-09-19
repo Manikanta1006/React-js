@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <script type="text/babel">
+            var ar=[1,2,3,4,5]
+            var br=[6,7,8,9,10]
+            var cr=[...ar,...br]
+            var h=<h1>{
+                // cr.map((x)=>{
+                //     return <li>{x}</li>
+                // })
+                ar.concat(br).map((x)=>{
+                    return <li>{x}</li>
+                })
+            }</h1>
+            ReactDOM.render(h,document.body)
+        </script>
+    </body>
+</html>

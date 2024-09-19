@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <form onsubmit="sub(event)">
+        <input type="text" placeholder="enter your firstname"> <br><br>
+        <input type="text" placeholder="enter your lastname"><br><br>
+        <input type="number" placeholder="enter your age"><br><br>
+        <button>submit</button>
+        </form>
+        <script type="text/babel">
+            var ar=[{
+                firstname:" ",
+                lastname:" ",
+                age:""
+            }]
+
+            function sub(ev){
+                firstname=ev.taget.value;
+            }
+            console.log(firstname)
+
+        </script>
+    </body>
+</html>

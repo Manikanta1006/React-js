@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <style>
+            img{
+                width:400px;
+            }
+        </style>
+    </head>
+    <body>
+        <script type="text/babel">
+            var a;
+                a=+prompt()
+            var im= <div><img src={a%2==0 ?"https://th.bing.com/th/id/OIP.IqjYvk5r-9q9jD1bLj-RkgHaEo?w=307&h=192&c=7&r=0&o=5&pid=1.7":"https://th.bing.com/th?q=Flighted+Pet+Parrots&w=120&h=120&c=1&rs=1&qlt=90&cb=1&pid=InlineBlock&mkt=en-IN&cc=IN&setlang=en&adlt=strict&t=1&mw=247"}/></div>
+             ReactDOM.render(im,document.body)
+
+            
+
+        </script>
+    </body>
+</html>
