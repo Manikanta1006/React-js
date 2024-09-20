@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="dv"></div>
+        <script type="text/babel">
+
+            function Abc(){
+                var[x,setx]=React.useState([10,6,9,7,8]);
+                var[y,sety]=React.useState([5,1,3,2,4]);
+
+            //  1.   // return <div>{
+                //     x.concat(y).sort().map((z)=>{
+                //         return <li>{z}</li>
+                //     })
+                // }</div>
+
+                // 2.
+                 return <div>{
+                    x.concat(y).sort((x,y)=>{return x>y?1:-1}).map((ar)=>{
+                        return <li>{ar}</li>
+                    })
+                 }</div>
+            }
+            ReactDOM.render(<Abc></Abc>,document.getElementById("dv"))
+        </script>
+    </body>
+</html>

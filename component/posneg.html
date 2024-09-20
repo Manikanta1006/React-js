@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="text/babel">
+            
+
+            function Abc(){
+                var a=+prompt();
+            var[a,seta]=React.useState(a);
+                 
+            return <div>
+                    <h1>{a>0?"positive":"negitive"}</h1>
+                </div>
+            }
+            ReactDOM.render(<Abc></Abc>,document.getElementById("root"))
+        </script>
+    </body>
+</html>
