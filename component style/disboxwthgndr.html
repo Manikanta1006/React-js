@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="dv"></div>
+        <script type="text/babel">
+            // fimg="https://cdn.pixabay.com/photo/2014/04/02/14/10/female-306407_640.png";
+            // mimg="https://i.pinimg.com/736x/2a/4e/8d/2a4e8dab6791ed643d5180bc72167f6d.jpg";
+
+            function Abc(){
+
+                var[x,setx]=React.useState([
+                {
+                    firstname: "Praveen",
+                    lastname: "Gubbala",
+                    age: 40,
+                    gender: "male"
+                },
+                {
+                    firstname: "Smrithi",
+                    lastname: "mandana",
+                    age: 25,
+                    gender: 'female'
+                },
+                {
+                    firstname: "mithali",
+                    lastname: "raj",
+                    age: 39,
+                    gender: 'female'
+                },
+                {
+                    firstname: "Rohit",
+                    lastname: "Sharma",
+                    age: 35,
+                    gender: 'male'
+                },
+                {
+                    firstname: "Sachin",
+                    lastname: "Tendulkar",
+                    age: 50,
+                    gender: 'male'
+                },
+            ])
+            return <div style={{display:'flex'}}>
+                {
+                    x.map((a)=>{
+                        return(
+                            <div style={{border:'2px solid',margin:'5px',display:"flex"}}>
+                               
+                                <div style={a.gender=='male'?{backgroundColor:'red'}:{backgroundColor:'blue'}}>
+                                    <h3>firstname:{a.firstname}</h3>
+                    <h3>lastname:{a.lastname}</h3>
+                    <h3>gender:{a.gender}</h3>
+                    
+                                    </div>
+                                    <div>
+                    <img src={a.gender=='male'?"https://cdn.pixabay.com/photo/2014/04/02/14/10/female-306407_640.png":"https://i.pinimg.com/736x/2a/4e/8d/2a4e8dab6791ed643d5180bc72167f6d.jpg"} alt="" width="100px"/>
+                </div>
+                    
+                    
+                    </div>
+
+                        )
+                    })
+                }
+            </div>
+
+            }
+            ReactDOM.render(<Abc></Abc>,document.getElementById("dv"))
+        </script>
+    </body>
+</html>

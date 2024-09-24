@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="dv"></div>
+        <script type="text/babel">
+            function Abc(){
+                var[x,setx]=React.useState(['mani','anil','kajal','anushka']);
+
+                return <div style={{display:'flex'}}>{
+                    x.map((y)=>{
+                        return <div style={{border:'2px solid',width:'50px',height:'20px',padding:'10px',margin:'10px'}}>{y}</div>
+                    })
+                }</div>
+            
+            }
+            ReactDOM.render(<Abc></Abc>,document.getElementById("dv"))
+        </script>
+    </body>
+</html>
